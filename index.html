@@ -6,43 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brendan McGuire</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400" rel="stylesheet">
     <style>
         body,
         html {
             margin: 0;
             height: 100%;
-            font-family: "Oswald", sans-serif
+            font-family: "Titillium Web", sans-serif;
+            font-weight: 300;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body>.wrapper {
+            overflow: hidden;
+        }
+
+        * {
+            outline: none;
+        }
+
+
+        header {
+            background-image: url(bg.png);
+            height: 120vh;
+            width: 120vw;
+            transform: rotate(-4deg);
+            position: absolute;
+            left: -10%;
+            top: -10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        header+* {
+            margin-top: 120vh;
+        }
+
+        header * {
+            transform: rotate(4deg);
+            color: #fff;
+        }
+
+        header img {
+            height: 128px;
+            width: 128px;
         }
 
         main {
-            width: 95%;
             max-width: 760px;
-            margin: 32px auto;
-            text-align: center
+            width: 95%;
+            margin: 120vh auto;
         }
 
-        img {
-            max-width: 95%;
-            max-height: 70vh;
-        }
         nav {
             position: fixed;
             top: 0;
             left: 0;
-            height: 8px;
             width: 100%;
-            background: #1a1a1a;
+            height: 11vh;
+            background-image: url(bg.png);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 
 <body>
-    <main>
-        <nav></nav>
-        <img src="https://avatars0.githubusercontent.com/u/8839926" alt="Brendan McGuire" class="profile" />
-        <h1>Brendan McGuire</h1>
-    </main>
+    <div class="wrapper">
+        <nav>BM</nav>
+        <header>
+            <h1>Brendan McGuire</h1>
+        </header>
+        <main>
+            <div class="split">
+
+                <section class="about">
+                    <p>Hello, I'm Brendan! I'm a programmer in Greenville, SC. Here's some things I do:</p>
+                    <ul>
+                        <li>VEX Robotics</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
