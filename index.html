@@ -56,7 +56,7 @@
         box-sizing: border-box;
       }
 
-      h1.intro {
+      h1.intro, h2.title {
         font-family: "Sansita", serif;
         margin-bottom: 8px;
       }
@@ -80,6 +80,7 @@
         margin-top: 24px;
         display: flex;
         flex-direction: column;
+        padding-bottom: 2rem;
       }
 
       nav.social a.link {
@@ -107,6 +108,19 @@
         h1.intro {
           margin-top: 2em;
         }
+      }
+
+      section.dashed-top {
+        border-top: 2px dashed #a29bfe
+      }
+
+      .project header {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .project .cta * {
+        padding-right: 8px;        
       }
     </style>
   </head>
@@ -146,6 +160,84 @@
           <span class="text">PGP Key</span>
         </a>
       </nav>
+
+      <h2 class="title">What I'm Working On</h2>
+      <section class="projects dashed-top">
+      
+        <div class="project">
+          <header>
+            <h3 class="title">Showdown in The Southeast</h3>
+            <h3 class="orange type">Robotics
+              Event</h3>
+          </header>
+          <p class="description">
+            Showdown in the Southeast is a VEX Robotics Competition scheduled for June 12-13, 2021.
+            It aims to bring together some of the top VEX Robotics teams throughout the southeastern
+            United States.
+          </p>
+          <div class="cta">
+            <a class="purple"
+              href="https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-21-4241.html">RobotEvents</a>
+            <a class="purple" href="mailto:bmmcgui@clemson.edu">Volunteer</a>
+          </div>
+        </div>
+      
+        <div class="project">
+          <header>
+            <h3 class="title">mtrx</h3>
+            <h3 class="orange type">Rust</h3>
+          </header>
+          <p class="description">
+            Makes use of Rust's const generics feature (recently stabilized!) to provide type-safe,
+            optimizable matrix operations.
+          </p>
+          <div class="cta">
+            <a class="purple" href="https://github.com/MayorMontu/mtrx">GitHub</a>
+          </div>
+        </div>
+      
+        <div class="project">
+          <header>
+            <h3 class="title">Clemson VEXU Robotics</h3>
+            <h3 class="orange type">C++/Rust</h3>
+          </header>
+          <p class="description">
+            Member of Clemson University's VEXU Robotics team, focusing on writing stable underlying
+            robot software. Motion algorithms, current reallocation, custom debugging, all that fun stuff!
+          </p>
+          <div class="cta">
+            <a class="purple" href="https://github.com/BCUZRobotics">GitHub</a>
+          </div>
+        </div>
+        <div class="project">
+          <header>
+            <h3 class="title">Snoostorm</h3>
+            <h3 class="orange type">TypeScript</h3>
+          </header>
+          <p class="description">
+            A realtime streaming API for Reddit, based on snoowrap.
+          </p>
+          <div class="cta">
+            <a class="purple" href="https://github.com/MayorMontu/snoowrap">GitHub</a>
+          </div>
+        </div>
+      
+        <div class="project">
+          <header>
+            <h3 class="title">vexbot</h3>
+            <h3 class="orange type">Discord Bot (TypeScript)</h3>
+      
+          </header>
+          <p class="description">
+            A discord bot for vex robotics focused servers. Supports server administration
+            features, runtime configuration, and team & event statistics.
+          </p>
+          <div class="cta">
+            <a class="purple" href="https://github.com/MayorMontu/vexbot">GitHub</a>
+            <a class="purple" href="https://vexbot.bren.app">Add to Server</a>
+          </div>
+        </div>
+      </section>
 
     </main>
   </body>
