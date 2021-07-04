@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="author" content="Brendan McGuire">
-    <meta name="description" content="Brendan McGuire is a Computer Science
-    Student at Clemson University">
+    <meta name="author" content="Brendan McGuire" />
+    <meta
+      name="description"
+      content="Brendan McGuire is a Computer Science
+    Student at Clemson University"
+    />
 
     <title>Brendan McGuire</title>
 
@@ -56,12 +59,13 @@
         box-sizing: border-box;
       }
 
-      h1.intro, h2.title {
+      h2.intro,
+      h2.title {
         font-family: "Sansita", serif;
         margin-bottom: 8px;
       }
 
-      h2.subhead {
+      .subhead {
         font-family: "Source Sans Pro", sans-serif;
         font-weight: 400;
         font-style: italic;
@@ -109,18 +113,44 @@
           margin-top: 2em;
         }
       }
-
-      section.dashed-top {
-        border-top: 2px dashed #a29bfe
-      }
-
       .project header {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
-      
+
+      .project header .subhead {
+        flex: 0 0 100%;
+        margin-top: -16px;
+      }
+
       .project .cta * {
-        padding-right: 8px;        
+        padding-right: 8px;
+      }
+
+      img.rounded {
+        border-radius: 100%;
+      }
+
+      section {
+        position: relative;
+      }
+
+      section.dashed-top {
+        border-top: 2px dashed #a29bfe;
+      }
+
+      section a.permalink {
+        position: absolute;
+        right: 0;
+        top: -36px;
+        font-size: 1.6rem;
+        color: #a29bfe;
+        text-decoration: none;
+      }
+
+      div.job {
+        display: flex;
       }
     </style>
   </head>
@@ -128,10 +158,8 @@
     <main>
       <h1 class="intro">Hi, I'm Brendan</h1>
       <h2 class="subhead">
-        A <span class="purple">Computer Science</span> Student at <span
-          class="orange"
-          >Clemson University</span
-        >
+        A <span class="purple">Computer Science</span> Student at
+        <span class="orange">Clemson University</span>
       </h2>
 
       <nav class="social">
@@ -161,27 +189,10 @@
         </a>
       </nav>
 
-      <h2 class="title">What I'm Working On</h2>
-      <section class="projects dashed-top">
-      
-        <div class="project">
-          <header>
-            <h3 class="title">Showdown in The Southeast</h3>
-            <h3 class="orange type">Robotics
-              Event</h3>
-          </header>
-          <p class="description">
-            Showdown in the Southeast is a VEX Robotics Competition scheduled for June 12-13, 2021.
-            It aims to bring together some of the top VEX Robotics teams throughout the southeastern
-            United States.
-          </p>
-          <div class="cta">
-            <a class="purple"
-              href="https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-21-4241.html">RobotEvents</a>
-            <a class="purple" href="mailto:bmmcgui@clemson.edu">Volunteer</a>
-          </div>
-        </div>
-      
+      <h2 class="title">Projects</h2>
+      <section class="projects dashed-top" id="projects">
+        <a href="#projects" class="permalink">#</a>
+
         <div class="project">
           <header>
             <h3 class="title">mtrx</h3>
@@ -238,7 +249,65 @@
           </div>
         </div>
       </section>
+      </section>
 
+      <h2 class="title">Education</h2>
+      <section class="education dashed-top" id="education">
+        <a href="#education" class="permalink">#</a>
+
+        <div class="project">
+          <header>
+            <h3>B.S. in Computer Science</h3>
+            <h3 class="orange type">2020-2023</h3>
+            <h4 class="subhead">Clemson University</h4>
+          </header>
+        </div>
+      </section>
+
+      <h2 class="title">Employment</h2>
+      <section class="employment dashed-top" id="employment">
+        <a href="#employment" class="permalink">#</a>
+
+        <div class="project">
+          <header>
+            <h3>Software Engineering Intern</h3>
+            <h3 class="orange type">Summer 2021</h3>
+            <h4 class="subhead">Clemson University</h4>
+          </header>
+          <p class="description">
+            Software Engineering position working on Clemson's CEVAC project,
+            which aims to optimize the University's energy usage from
+            temperature control. Technologies used: TypeScript, React Native, Nodejs
+          </p>
+        </div>
+        <div class="project">
+          <header>
+            <h3 class="title">Event Support Specialist</h3>
+            <h3 class="orange type">2021-Present</h3>
+            <h4 class="subhead">Robotics Education and Competition Foundation</h4>
+          </header>
+          <p class="description">
+            Helped to fulfill the RECF's mission of providing affordable, sustainable robotics
+            engineering programs by supporting local robotics competitions throughout South Carolina
+          </p>
+          <p class="description"></p>
+        </div>
+        <div class="project">
+          <header>
+            <h3 class="title">Teaching Assistant</h3>
+            <h3 class="orange type">2020-Present</h3>
+            <h4 class="subhead">Clemson University</h4>
+          </header>
+          <p class="description">
+            Helped to introduce, reinforce, and assess course work for introductory Computer Science
+            classes (CPSC 1110, CPSC 2310)
+          </p>
+          <p class="description"></p>
+        </div>
+        </div>
+      </section>
+
+  
     </main>
   </body>
 </html>
