@@ -18,160 +18,166 @@
   </head>
   <body>
     <main>
-      <header>
-        <h1 class="intro">Hi, I'm Brendan</h1>
-        <h2 class="subhead">
-         A <span class="purple">Computer Science</span> Student at
-          <span class="orange">Clemson University</span>
-        </h2>
-      </header>
+      <section class="left">
+        <header>
+          <h1 class="intro">Hi, I'm Brendan</h1>
+          <h2 class="subhead">
+            A <span class="purple">Computer Science</span> Student at
+            <span class="orange">Clemson University</span>
+          </h2>
+        </header>
 
-      <nav class="social">
-        <a
-          href="https://github.com/MayorMonty"
-          class="link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/assets/github.svg" alt="GitHub" width="32" height="32" />
-          <span class="text">MayorMonty</span>
-        </a>
+        <nav class="social">
+          <a
+            href="https://github.com/MayorMonty"
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/github.svg" alt="GitHub" width="32" height="32" />
+            <span class="text">MayorMonty</span>
+          </a>
 
-        <a
-          href="mailto:brendan@bren.app"
-          class="link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="/assets/email.svg" alt="Email" width="32" height="32" />
-          <span class="text">brendan@bren.app</span>
-        </a>
+          <a
+            href="mailto:brendan@bren.app"
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/email.svg" alt="Email" width="32" height="32" />
+            <span class="text">brendan@bren.app</span>
+          </a>
 
-        <a href="/brendan_mcguire.asc" class="link">
-          <img src="/assets/key.svg" alt="Key" width="32" height="32" />
-          <span class="text">PGP Key</span>
-        </a>
-      </nav>
-
-      <h2 class="title">Projects</h2>
-      <section class="projects dashed-top" id="projects">
-        <a href="#projects" class="permalink">#</a>
-
-        <div class="project">
-          <header>
-            <h3 class="title">mtrx</h3>
-            <h3 class="orange type">Rust</h3>
-          </header>
-          <p class="description">
-            Makes use of Rust's const generics feature (recently stabilized!) to provide type-safe,
-            optimizable matrix operations.
-          </p>
-          <div class="cta">
-            <a class="purple" href="https://github.com/MayorMontu/mtrx">GitHub</a>
-          </div>
-        </div>
-      
-        <div class="project">
-          <header>
-            <h3 class="title">Clemson VEXU Robotics</h3>
-            <h3 class="orange type">C++/Rust</h3>
-          </header>
-          <p class="description">
-            Member of Clemson University's VEXU Robotics team, focusing on writing stable underlying
-            robot software. Motion algorithms, current reallocation, custom debugging, all that fun stuff!
-          </p>
-          <div class="cta">
-            <a class="purple" href="https://github.com/BCUZRobotics">GitHub</a>
-          </div>
-        </div>
-        <div class="project">
-          <header>
-            <h3 class="title">Snoostorm</h3>
-            <h3 class="orange type">TypeScript</h3>
-          </header>
-          <p class="description">
-            A realtime streaming API for Reddit, based on snoowrap.
-          </p>
-          <div class="cta">
-            <a class="purple" href="https://github.com/MayorMontu/snoowrap">GitHub</a>
-          </div>
-        </div>
-      
-        <div class="project">
-          <header>
-            <h3 class="title">vexbot</h3>
-            <h3 class="orange type">Discord Bot (TypeScript)</h3>
-      
-          </header>
-          <p class="description">
-            A discord bot for vex robotics focused servers. Supports server administration
-            features, runtime configuration, and team & event statistics.
-          </p>
-          <div class="cta">
-            <a class="purple" href="https://github.com/MayorMontu/vexbot">GitHub</a>
-            <a class="purple" href="https://vexbot.bren.app">Add to Server</a>
-          </div>
-        </div>
-      </section>
+          <a href="/brendan_mcguire.asc" class="link">
+            <img src="/assets/key.svg" alt="Key" width="32" height="32" />
+            <span class="text">PGP Key</span>
+          </a>
+        </nav>
       </section>
 
-      <h2 class="title">Education</h2>
-      <section class="education dashed-top" id="education">
-        <a href="#education" class="permalink">#</a>
+      <section class="right">
+        <ul class="tabs" role="tablist">
+          <input type="radio" name="tabs" id="tabone" checked="checked" />
+          <label for="tabone">Skills</label>
+          <div class="tab">
+            <section class="pillbox">
+              <a class="pill">TypeScript</a>
+              <a class="pill">React</a>
+              <a class="pill">React Native</a>
+              <a class="pill">Nodejs</a>
+              <a class="pill">Java</a>
+              <a class="pill">C</a>
+              <a class="pill">Rust</a>
+            </section>
+          </div>
 
-        <div class="project">
-          <header>
-            <h3 class="title">B.S. in Computer Science</h3>
-            <h3 class="orange type">2020-2023</h3>
-            <h4 class="subhead">Clemson University</h4>
-          </header>
-        </div>
+          <input type="radio" name="tabs" id="tabtwo" />
+          <label for="tabtwo">Projects</label>
+          <div class="tab">
+            <a href="https://github.com/MayorMonty?tab=repositories" class="orange">All projects</a>
+            <div class="project">
+              <header>
+                <h3 class="title">mtrx</h3>
+                <h3 class="orange type">Rust</h3>
+              </header>
+              <p class="description">
+                Makes use of Rust's const generics feature (recently
+                stabilized!) to provide type-safe, optimizable matrix
+                operations.
+              </p>
+              <div class="cta">
+                <a class="purple" href="https://github.com/MayorMontu/mtrx"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+
+            <div class="project">
+              <header>
+                <h3 class="title">Clemson VEXU Robotics</h3>
+                <h3 class="orange type">C++/Rust</h3>
+              </header>
+              <p class="description">
+                Member of Clemson University's VEXU Robotics team, focusing on
+                writing stable underlying robot software. Motion algorithms,
+                current reallocation, custom debugging, all that fun stuff!
+              </p>
+              <div class="cta">
+                <a class="purple" href="https://github.com/BCUZRobotics"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <header>
+                <h3 class="title">Snoostorm</h3>
+                <h3 class="orange type">TypeScript</h3>
+              </header>
+              <p class="description">
+                A realtime streaming API for Reddit, based on snoowrap.
+              </p>
+              <div class="cta">
+                <a class="purple" href="https://github.com/MayorMontu/snoowrap"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+
+            <div class="project">
+              <header>
+                <h3 class="title">vexbot</h3>
+                <h3 class="orange type">Discord Bot (TypeScript)</h3>
+              </header>
+              <p class="description">
+                A discord bot for vex robotics focused servers. Supports server
+                administration features, runtime configuration, and team & event
+                statistics.
+              </p>
+              <div class="cta">
+                <a class="purple" href="https://github.com/MayorMontu/vexbot"
+                  >GitHub</a
+                >
+                <a class="purple" href="https://vexbot.bren.app"
+                  >Add to Server</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <input type="radio" name="tabs" id="tabthree" />
+          <label for="tabthree">Experience</label>
+          <div class="tab">
+
+            <section class="employment" id="employment">
+              <div class="project">
+                <header>
+                  <h3 class="title">Software Engineer Intern</h3>
+                  <h3 class="orange type">Summer 2021</h3>
+                  <h4 class="subhead">Clemson University</h4>
+                </header>
+                <p class="description">
+                  Software Engineering position working on Clemson's CEVAC project,
+                  which aims to optimize the University's energy usage from
+                  temperature control. Technologies used: TypeScript, React Native, Nodejs
+                </p>
+              </div>
+              <div class="project">
+                <header>
+                  <h3 class="title">Teaching Assistant</h3>
+                  <h3 class="orange type">2020-Present</h3>
+                  <h4 class="subhead">Clemson University</h4>
+                </header>
+                <p class="description">
+                  Helped to introduce, reinforce, and assess course work for introductory Computer Science
+                  classes (CPSC 1110, CPSC 2310)
+                </p>
+                <p class="description"></p>
+              </div>
+              </div>
+            </section>
+          </div>
+        </ul>
       </section>
-
-      <h2 class="title">Employment</h2>
-      <section class="employment dashed-top" id="employment">
-        <a href="#employment" class="permalink">#</a>
-
-        <div class="project">
-          <header>
-            <h3 class="title">Software Engineer Intern</h3>
-            <h3 class="orange type">Summer 2021</h3>
-            <h4 class="subhead">Clemson University</h4>
-          </header>
-          <p class="description">
-            Software Engineering position working on Clemson's CEVAC project,
-            which aims to optimize the University's energy usage from
-            temperature control. Technologies used: TypeScript, React Native, Nodejs
-          </p>
-        </div>
-        <!-- <div class="project">
-          <header>
-            <h3 class="title">Event Support Specialist</h3>
-            <h3 class="orange type">2021-Present</h3>
-            <h4 class="subhead">Robotics Education and Competition Foundation</h4>
-          </header>
-          <p class="description">
-            Helped to fulfill the RECF's mission of providing affordable, sustainable robotics
-            engineering programs by supporting local robotics competitions throughout South Carolina
-          </p>
-          <p class="description"></p>
-        </div> -->
-        <div class="project">
-          <header>
-            <h3 class="title">Teaching Assistant</h3>
-            <h3 class="orange type">2020-Present</h3>
-            <h4 class="subhead">Clemson University</h4>
-          </header>
-          <p class="description">
-            Helped to introduce, reinforce, and assess course work for introductory Computer Science
-            classes (CPSC 1110, CPSC 2310)
-          </p>
-          <p class="description"></p>
-        </div>
-        </div>
-      </section>
-
-  
     </main>
   </body>
 </html>
