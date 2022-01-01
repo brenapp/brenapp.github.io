@@ -47,136 +47,140 @@
             <img src="/assets/email.svg" alt="Email" width="32" height="32" />
             <span class="text">brendan@bren.app</span>
           </a>
-
-          <a href="/brendan_mcguire.asc" class="link">
-            <img src="/assets/key.svg" alt="Key" width="32" height="32" />
-            <span class="text">PGP Key</span>
-          </a>
         </nav>
+
+        <section class="about">
+          <h3 class="title">What I Do!</h3>
+          <div class="position">
+            <h4 class="purple company">Epic Systems</h4>
+            <h4 class="role">Software Developer Intern (Summer 2022)</h4>
+          </div>
+          <div class="position">
+            <h4 class="purple company">Robotics Education & Competition Foundation</h4>
+            <h4 class="role">Event Support Specialist (Fall 2021—)</h4>
+          </div>
+          <div class="position">
+            <h4 class="purple company">Clemson Energy Visualization & Analytics Center</h4>
+            <h4 class="role">Software Developer Intern (Summer 2021—)</h4>
+          </div>
+        </section>
+
       </section>
-
       <section class="right">
-        <ul class="tabs" role="tablist">
-          <input type="radio" name="tabs" id="tabone" checked="checked" />
-          <label for="tabone">Skills</label>
-          <div class="tab">
-            <section class="pillbox">
-              <a class="pill">TypeScript</a>
-              <a class="pill">React</a>
-              <a class="pill">React Native</a>
-              <a class="pill">Nodejs</a>
-              <a class="pill">Java</a>
-              <a class="pill">C</a>
-              <a class="pill">Rust</a>
-            </section>
+        <h4 class="subhead">
+          Things I Have Made! You may find them interesting...
+        </h4>
+        <div class="project">
+          <header>
+            <h3 class="title">Plausible Denabilities</h3>
+            <h3 class="orange type">React + Node</h3>
+          </header>
+          <p class="description">
+            Realtime guessing game based on The Technical Difficulties'
+            <em>Two of These People Are Lying</em>. Players take turns bluffing
+            about a selected prompt, with one player being the judge.
+          </p>
+          <div class="cta">
+            <a
+              class="purple"
+              href="https://pd.bren.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play</a
+            >
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/pd-client"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source (Client)</a
+            >
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/pd-server"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source (Server)</a
+            >
           </div>
-
-          <input type="radio" name="tabs" id="tabtwo" />
-          <label for="tabtwo">Projects</label>
-          <div class="tab">
-            <a href="https://github.com/MayorMonty?tab=repositories" class="orange">All projects</a>
-            <div class="project">
-              <header>
-                <h3 class="title">mtrx</h3>
-                <h3 class="orange type">Rust</h3>
-              </header>
-              <p class="description">
-                Makes use of Rust's const generics feature (recently
-                stabilized!) to provide type-safe, optimizable matrix
-                operations.
-              </p>
-              <div class="cta">
-                <a class="purple" href="https://github.com/MayorMontu/mtrx"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project">
-              <header>
-                <h3 class="title">Clemson VEXU Robotics</h3>
-                <h3 class="orange type">C++/Rust</h3>
-              </header>
-              <p class="description">
-                Member of Clemson University's VEXU Robotics team, focusing on
-                writing stable underlying robot software. Motion algorithms,
-                current reallocation, custom debugging, all that fun stuff!
-              </p>
-              <div class="cta">
-                <a class="purple" href="https://github.com/BCUZRobotics"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <header>
-                <h3 class="title">Snoostorm</h3>
-                <h3 class="orange type">TypeScript</h3>
-              </header>
-              <p class="description">
-                A realtime streaming API for Reddit, based on snoowrap.
-              </p>
-              <div class="cta">
-                <a class="purple" href="https://github.com/MayorMontu/snoowrap"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-
-            <div class="project">
-              <header>
-                <h3 class="title">vexbot</h3>
-                <h3 class="orange type">Discord Bot (TypeScript)</h3>
-              </header>
-              <p class="description">
-                A discord bot for vex robotics focused servers. Supports server
-                administration features, runtime configuration, and team & event
-                statistics.
-              </p>
-              <div class="cta">
-                <a class="purple" href="https://github.com/MayorMontu/vexbot"
-                  >GitHub</a
-                >
-                <a class="purple" href="https://vexbot.bren.app"
-                  >Add to Server</a
-                >
-              </div>
-            </div>
+        </div>
+        <div class="project">
+          <header>
+            <h3 class="title">Snoostorm</h3>
+            <h3 class="orange type">TypeScript</h3>
+          </header>
+          <p class="description">
+            Stream-based client for the Reddit API, built on top of snoowrap.
+            Allows users to build reddit agents which can react realtime to
+            events on the site
+          </p>
+          <div class="cta">
+            <a
+              class="purple"
+              href="https://npm.im/snoostorm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NPM</a
+            >
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/snoowrap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source</a
+            >
           </div>
-
-          <input type="radio" name="tabs" id="tabthree" />
-          <label for="tabthree">Experience</label>
-          <div class="tab">
-
-            <section class="employment" id="employment">
-              <div class="project">
-                <header>
-                  <h3 class="title">Software Engineer Intern</h3>
-                  <h3 class="orange type">Summer 2021</h3>
-                  <h4 class="subhead">Clemson University</h4>
-                </header>
-                <p class="description">
-                  Software Engineering position working on Clemson's CEVAC project,
-                  which aims to optimize the University's energy usage from
-                  temperature control. Technologies used: TypeScript, React Native, Nodejs
-                </p>
-              </div>
-              <div class="project">
-                <header>
-                  <h3 class="title">Teaching Assistant</h3>
-                  <h3 class="orange type">2020-Present</h3>
-                  <h4 class="subhead">Clemson University</h4>
-                </header>
-                <p class="description">
-                  Helped to introduce, reinforce, and assess course work for introductory Computer Science
-                  classes (CPSC 1110, CPSC 2310)
-                </p>
-                <p class="description"></p>
-              </div>
-              </div>
-            </section>
+        </div>
+        <div class="project">
+          <header>
+            <h3 class="title">Robotics Events Tools</h3>
+            <h3 class="orange type">TypeScript</h3>
+          </header>
+          <p class="description">
+            Tools to help you run and work with RECF robotics tournaments more
+            easily!
+          </p>
+          <p><code>robotevents</code> — Realtime client for the RobotEvents API v2</p>
+          <p>
+            <code>vex-tm-client</code> — A programmatic client for VEX Tournament
+            Manager
+          </p>
+          <p>
+            <code>tm-obs-switcher</code> — Automatically switch OBS scenes when
+            matches start
+          </p>
+          <div class="cta">
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/robotevents"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>robotevents</code>
+            </a>
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/vex-tm-client"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>vex-tm-client</code></a
+            >
+            <a
+              class="purple"
+              href="https://github.com/MayorMonty/tm-obs-switcher"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <code>tm-obs-switcher</code></a
+            >
           </div>
-        </ul>
+        </div>
       </section>
     </main>
   </body>
