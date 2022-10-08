@@ -7,8 +7,7 @@
     <meta name="author" content="Brendan McGuire" />
     <meta
       name="description"
-      content="Brendan McGuire is a Computer Science
-    Student at Clemson University"
+      content="Brendan McGuire is a Computer Science Student at Clemson University"
     />
 
     <title>Brendan McGuire</title>
@@ -17,168 +16,73 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <main>
-      <section class="left">
-        <header>
-          <h1 class="intro">Hi, I'm Brendan</h1>
-          <h2 class="subhead">
-            A <span class="purple">Computer Science</span> Student at
-            <span class="orange">Clemson University</span>
-          </h2>
-        </header>
-
-        <nav class="social">
+    <header id="page">
+      <div class="bg"></div>
+      <section class="intro">
+        <h1>Hey, I'm Brendan!</h1>
+        <section class="socials">
           <a
-            href="https://github.com/MayorMonty"
-            class="link"
-            target="_blank"
+            href="https://go.bren.app/github"
             rel="noopener noreferrer"
+            target="_blank"
           >
-            <img src="/assets/github.svg" alt="GitHub" width="32" height="32" />
-            <span class="text">MayorMonty</span>
+            <img src="./assets/github.svg" alt="GitHub" />
           </a>
-
+          <a
+            href="https://go.bren.app/linkedin"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src="./assets/linked.svg" alt="LinkedIn" />
+          </a>
           <a
             href="mailto:brendan@bren.app"
-            class="link"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
-            <img src="/assets/email.svg" alt="Email" width="32" height="32" />
-            <span class="text">brendan@bren.app</span>
+            <img src="./assets/email.svg" alt="Email" />
           </a>
-        </nav>
-
-        <section class="about">
-          <h3 class="title">Work Experience</h3>
-          <div class="position">
-            <h4 class="purple company">Epic Systems</h4>
-            <h4 class="role">Software Developer Intern (Summer 2022)</h4>
-          </div>
-          <div class="position">
-            <h4 class="purple company">Robotics Education & Competition Foundation</h4>
-            <h4 class="role">Event Support Specialist (Fall 2021—)</h4>
-          </div>
-          <div class="position">
-            <h4 class="purple company">Clemson Energy Visualization & Analytics Center</h4>
-            <h4 class="role">Software Developer Intern (Summer 2021—)</h4>
-          </div>
         </section>
-
+        <section class="image">
+          <img src="./assets/bren.png" alt="Profile Picture" />
+        </section>
       </section>
-      <section class="right">
-        <div class="project">
-          <header>
-            <h3 class="title">Plausible Denabilities</h3>
-            <h3 class="orange type">React + Node</h3>
-          </header>
-          <p class="description">
-            Realtime guessing game based on The Technical Difficulties'
-            <em>Two of These People Are Lying</em>. Players take turns bluffing
-            about a selected prompt, with one player being the judge.
-          </p>
-          <div class="cta">
-            <a
-              class="purple"
-              href="https://pd.bren.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Play</a
-            >
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/pd-client"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source (Client)</a
-            >
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/pd-server"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source (Server)</a
-            >
-          </div>
-        </div>
-        <div class="project">
-          <header>
-            <h3 class="title">Snoostorm</h3>
-            <h3 class="orange type">TypeScript</h3>
-          </header>
-          <p class="description">
-            Stream-based client for the Reddit API, built on top of snoowrap.
-            Allows users to build reddit agents which can react realtime to
-            events on the site
-          </p>
-          <div class="cta">
-            <a
-              class="purple"
-              href="https://npm.im/snoostorm"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NPM</a
-            >
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/snoowrap"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Source</a
-            >
-          </div>
-        </div>
-        <div class="project">
-          <header>
-            <h3 class="title">Robotics Events Tools</h3>
-            <h3 class="orange type">TypeScript</h3>
-          </header>
-          <p class="description">
-            Tools to help you run and work with RECF robotics tournaments more
-            easily!
-          </p>
-          <p><code>robotevents</code> — Realtime client for the RobotEvents API v2</p>
-          <p>
-            <code>vex-tm-client</code> — A programmatic client for VEX Tournament
-            Manager
-          </p>
-          <p>
-            <code>tm-obs-switcher</code> — Automatically switch OBS scenes when
-            matches start
-          </p>
-          <div class="cta">
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/robotevents"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <code>robotevents</code>
-            </a>
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/vex-tm-client"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <code>vex-tm-client</code></a
-            >
-            <a
-              class="purple"
-              href="https://github.com/MayorMonty/tm-obs-switcher"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <code>tm-obs-switcher</code></a
-            >
-          </div>
-        </div>
+    </header>
+    <main>
+      <section id="about-me">
+        <h2>About Me</h2>
+        <p>
+          I am a college student at Clemson University studying Computer Science, with an expected
+          graduation of May 2023! Ever since I was a child, I have been fascinated with programming,
+          and am so exciting to be able to pursue it as a career. 
+        </p>
+        <p>On the weekends, I work for the nonprofit, Robotics Education & Competition Foundation
+        helping K-12 educators run competitive robotics events for students. Nothing gets me excited
+        to wake up at 6:00 AM on a Saturday morning like seeing this community in action!</p>
+        <a href="./brendan_mcguire_resume.pdf">My Resume</a>
       </section>
+      <section id="quick-links">
+        <h2>Project Links</h2>
+        <section class="links">
+          <a href="https://github.com/MayorMonty/tm-obs-switcher">
+            <img src="./assets/project/tm-switcher.png" alt="TM Switcher" />
+          </a>
+           <a href="https://github.com/MayorMonty/snoostorm">
+            <img src="./assets/project/snoostorm.png" alt="Snoostorm" />
+          </a>
+           <a href="https://github.com/MayorMonty/tigertix">
+            <img src="./assets/project/tigertix.png" alt="Tigertix" />
+          </a>
+           <a href="https://github.com/MayorMonty/csss">
+            <img src="./assets/project/css.png" alt="CSS Minifier" />
+          </a>
+           <a href="https://github.com/MayorMonty/liquid">
+            <img src="./assets/project/liquid.png" alt="Liquid" />
+          </a>
+          <a href="https://github.com/MayorMonty">
+            <img src="./assets/github-cta.png" alt="More on GitHub!" />
+          </a>
+        </section>
     </main>
   </body>
 </html>
