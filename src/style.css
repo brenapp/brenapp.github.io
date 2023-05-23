@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Sansita";
   font-style: normal;
@@ -155,7 +159,7 @@ header#page .bg {
   animation: 10s ease-in-out infinite;
   animation-name: bg-rotate;
 
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 
 header#page section.intro {
