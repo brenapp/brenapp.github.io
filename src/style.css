@@ -90,6 +90,7 @@ h6 {
 
 :root {
   --dark: #222;
+  --light: #eee;
 
   --blurple: #a29bfe;
   --blorange-1: #a29bfe;
@@ -112,12 +113,20 @@ html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, avenir next,
     avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
     arial, sans-serif;
-  color: #eee;
+  color: var(--light);
   background-color: var(--dark);
   margin: 0;
   height: 100%;
   box-sizing: border-box;
   font-size: 1.1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  body,
+  html {
+    background-color: var(--light);
+    color: var(--dark);
+  }
 }
 
 a {
@@ -143,13 +152,10 @@ header#page {
   position: relative;
   width: 100%;
   height: 18rem;
+  color: var(--light);
 }
 
-header#page .bg {
-  position: absolute;
-
-  width: 100%;
-  height: 18rem;
+.gradient-bg {
   --angle: 180deg;
   background: linear-gradient(
     var(--angle),
@@ -158,7 +164,13 @@ header#page .bg {
   );
   animation: 10s ease-in-out infinite;
   animation-name: bg-rotate;
+}
 
+header#page .gradient-bg {
+  position: absolute;
+
+  width: 100%;
+  height: 18rem;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
 }
 
@@ -247,4 +259,10 @@ section#quick-links .links a:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   background: rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  .aside {
+    background: rgba(0, 0, 0, 0.05);
+  }
 }
