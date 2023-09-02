@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Brendan McGuire" />
+
+    <title>Spunky</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="../src/style.css" />
+  </head>
+  <body>
+    <section
+      class="grid md:grid-cols-5 md:grid-rows-5 grid-cols-2 grid-rows-4 h-screen w-screen max-w-5xl mx-auto mb-4 gap-2"
+    >
+      <div class="md:col-span-3 md:row-span-2 col-span-2 bg-white/10">
+        <img src="./spunky/spunky1.jpg" class="w-full h-full object-cover" />
+      </div>
+      <div class="md:col-span-2 md:row-span-3 row-span-2 bg-white/10">
+        <img src="./spunky/spunky5.jpg" class="w-full h-full object-cover" />
+      </div>
+      <div class="bg-white/10 md:col-span-2 md:row-span-2">
+        <img src="./spunky/spunky7.jpg" class="w-full h-full object-cover" />
+      </div>
+      <div class="bg-white/10">
+        <img src="./spunky/spunky6.jpg" class="w-full h-full object-cover" />
+      </div>
+      <div class="bg-white/10 lg:col-span-3 md:row-span-2 md:col-span-2">
+        <img src="./spunky/spunky3.jpg" class="w-full h-full object-cover" />
+      </div>
+      <div class="bg-white/10 md:col-span-2">
+        <img src="./spunky/spunky9.jpg" class="w-full h-full object-cover" />
+      </div>
+    </section>
+    <nav
+      class="fixed bottom-0 w-full l-0 bg-black/80 h-16 flex items-center justify-between gap-4 px-4"
+    >
+      <select name="" id="" class="bg-transparent">
+        <option value="spunky">Spunky</option>
+        <option value="toby">Toby</option>
+        <option value="allie">Allie</option>
+        <option value="chester">Chester</option>
+      </select>
+      <p class="mb-0">Made with ❤️ by Brendan</p>
+    </nav>
+    <script>
+      const images = document.querySelectorAll("img");
+      const select = document.querySelector("select");
+
+      const srcs = {
+        spunky: [
+          "./spunky/spunky1.jpg",
+          "./spunky/spunky5.jpg",
+          "./spunky/spunky7.jpg",
+          "./spunky/spunky6.jpg",
+          "./spunky/spunky3.jpg",
+          "./spunky/spunky9.jpg",
+        ],
+        toby: [
+          "./toby/toby1.jpg",
+          "./toby/toby5.jpg",
+          "./toby/toby7.jpg",
+          "./toby/toby6.jpg",
+          "./toby/toby3.jpg",
+          "./toby/toby8.jpg",
+        ],
+        allie: [
+          "./allie/allie6.jpg",
+          "./allie/allie5.jpg",
+          "./allie/allie7.jpg",
+          "./allie/allie1.jpg",
+          "./allie/allie3.jpg",
+          "./allie/allie8.jpg",
+        ],
+        chester: [
+          "./chester/chester1.jpg",
+          "./chester/chester8.jpg",
+          "./chester/chester5.jpg",
+          "./chester/chester7.jpg",
+          "./chester/chester6.jpg",
+          "./chester/chester3.jpg",
+        ],
+      };
+
+      select.addEventListener("change", (e) => {
+        const value = e.target.value;
+        images.forEach((img, i) => {
+          img.src = srcs[value][i];
+        });
+      });
+    </script>
+  </body>
+</html>
