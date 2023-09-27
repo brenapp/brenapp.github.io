@@ -16,13 +16,14 @@
   <body>
     <header id="page">
       <div class="gradient-bg"></div>
-      <section class="intro">
+      <section class="intro container mx-auto">
         <h1>Hey, I'm Brendan!</h1>
         <section class="socials">
           <a
             href="https://go.bren.app/github"
             rel="noopener noreferrer"
             target="_blank"
+            class="hover:scale-110 transition-transform"
           >
             <img src="./github.svg" alt="GitHub" />
           </a>
@@ -30,6 +31,7 @@
             href="https://go.bren.app/linkedin"
             rel="noopener noreferrer"
             target="_blank"
+            class="hover:scale-110 transition-transform"
           >
             <img src="./linked.svg" alt="LinkedIn" />
           </a>
@@ -37,64 +39,135 @@
             href="mailto:brendan@bren.app"
             rel="noopener noreferrer"
             target="_blank"
+            class="hover:scale-110 transition-transform"
           >
             <img src="./email.svg" alt="Email" />
           </a>
         </section>
         <section class="image">
-          <img src="https://avatars.githubusercontent.com/u/8839926" alt="Profile Picture"
-          width="217" height="217" class="aspect-square"/>
+          <img
+            src="https://avatars.githubusercontent.com/u/8839926"
+            alt="Profile Picture"
+            width="217"
+            height="217"
+            class="aspect-square"
+          />
         </section>
       </section>
     </header>
-    <main>
-      <section id="about-me">
+    <main class="container mx-auto grid lg:grid-cols-3 p-4 mt-4 gap-4">
+      <section id="about-me" class="lg:col-span-2">
         <h2 class="text-xl">About Me</h2>
-       <p>
-        I am a Software Developer currently based in Madison, WI. I currently work for Epic Systems
-        on the Chronicles Database. I have a passion for building:
-       </p>
-       <ul class="mt-4">
-        <li class="ml-4 list-disc">Powerful, intuitive and accessible user interfaces</li>
-        <li class="ml-4 list-disc">Awesome Developer Tooling</li>
-        <li class="ml-4 list-disc">Software to make people's lives easier</li>
-       </ul>
-       <p class="mt-4">I fell in love with software at a young age, particularly web technology. The
-       first time I saw the source of a website in DevTools, I was hooked!</p>
-       <p class="mt-4">Additionally, I am also involved in the competitive robotics space, particularly
-       the VEX Robotics Competition and VEX IQ Robotics Competition. These programs benefitted me
-       immensely when I was younger, so nothing else gets me as excited to wake up at 6:00 AM on a Saturday!</p>
+        <p>
+          I am a Software Developer currently based in Madison, WI. I currently
+          work for Epic Systems on the Chronicles Database. I have a passion for
+          building:
+        </p>
+        <ul class="mt-4">
+          <li class="ml-4 list-disc">
+            Powerful, intuitive and accessible user interfaces
+          </li>
+          <li class="ml-4 list-disc">Awesome Developer Tooling</li>
+          <li class="ml-4 list-disc">Software to make people's lives easier</li>
+        </ul>
+        <p class="mt-4">
+          I fell in love with software at a young age, particularly web
+          technology. The first time I saw the source of a website in DevTools,
+          I was hooked!
+        </p>
+        <p class="mt-4">
+          Additionally, I am also involved in the competitive robotics space,
+          particularly the VEX Robotics Competition and VEX IQ Robotics
+          Competition. These programs benefitted me immensely when I was
+          younger, so nothing else gets me as excited to wake up at 6:00 AM on a
+          Saturday!
+        </p>
       </section>
-      <section class="pt-4">
-        <h2 class="text-xl">Project Links</h2>
-        <p>You can see some of my favorite and most popular personal projects linked below. Check
-        out my <a href="https://go.bren.app/github">GitHub</a> to see more of my work! </p>
-        <section class="grid grid-flow-row auto-rows-max grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-          <a href="https://github.com/MayorMonty/tm-obs-switcher">
-            <img src="./project/tm-switcher.png" alt="TM Switcher" />
+      <section id="projects">
+        <h2 class="text-xl">Featured Projects</h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 mt-4">
+          <a href="https://github.com/MayorMonty/tm-switcher" role="listitem">
+            <h3>TM Switcher</h2>
+            <p class="text-sm text-zinc-100">
+              A fully-featured livestream management system for VEX Robotics
+              Events. Integrates with VEX Tournament Manager, OBS, and ATEM
+            </p>
           </a>
-           <a href="https://github.com/MayorMonty/snoostorm">
-            <img src="./project/snoostorm.png" alt="Snoostorm" />
+          <a href="/guides/" role="listitem" class="">
+            <h3>CS Guides</h2>
+            <p class="text-sm text-zinc-100">
+              Guides to Computer Science topics I wrote while attending Clemson
+              University.
+            </p>
           </a>
-           <a href="/guides/">
-            <img src="./project/guides.png" alt="CS Guides" />
+          <a
+            href="https://github.com/MayorMonty/snoostorm"
+            role="listitem"
+            class=""
+          >
+            <h3>Snoostorm</h2>
+            <p class="text-sm text-zinc-100">
+              An event-based wrapper for the Reddit API, allowing you to easily
+              write code to react to new comments, submissions, and events
+              across the Reddit API.
+            </p>
           </a>
-           <a href="https://github.com/MayorMonty/css">
-            <img src="./project/css.png" alt="CSS Minifier" />
+          <a
+            href="https://github.com/MayorMonty/liquid"
+            role="listitem"
+            class=""
+          >
+            <h3>Liquid</h2>
+            <p class="text-sm text-zinc-100">
+              A high-quality discord bot template, with great DX. Designed to
+              get you from idea to execution as quickly as possible, in a
+              simple, maintainable system.
+            </p>
           </a>
-           <a href="https://github.com/MayorMonty/liquid">
-            <img src="./project/liquid.png" alt="Liquid" />
+          <a
+            href="https://github.com/MayorMonty/short"
+            role="listitem"
+            class=""
+          >
+            <h3>Short</h2>
+            <p class="text-sm text-zinc-100">
+              A fun lil PWA frontend for the Short.IO API, which powers
+              go.bren.app, my custom URL shortener.
+            </p>
           </a>
-          <a href="https://github.com/MayorMonty/short">
-            <img src="./project/short.png" alt="Short">
+          <a
+            href="https://github.com/MayorMonty/motes"
+            role="listitem"
+            class=""
+          >
+            <h3>Motes</h2>
+            <p class="text-sm text-zinc-100">
+              Quick, keyboard-friendly, and accessible note-taking app designed
+              for quick action items during meetings.
+            </p>
           </a>
-          <a href="https://github.com/MayorMonty/motes">
-            <img src="./project/motes.png" alt="Motes">
+          <a
+            href="https://github.com/MayorMonty/PatBot"
+            role="listitem"
+            class=""
+          >
+            <h3>PatBot</h2>
+            <p class="text-sm text-zinc-100">
+              Delightful and spooky fine-tuned GPT-4 model hooked up to a
+              discord bot, fine-tuned on my friend Pat's message history.
+              Originally created as an April Fools joke.
+            </p>
           </a>
-          <a href="https://github.com/MayorMonty">
-            <img src="./github-cta.png" alt="More on GitHub!" />
+          <a
+            href="https://github.com/MayorMonty?tab=repositories"
+            role="listitem"
+            class="bg-zinc-950 text-center text-zinc-100 py-4 rounded-md flex items-center justify-center gap-4 hover:bg-zinc-700 md:col-span-2 lg:col-span-1"
+          >
+            <img src="./github.svg" alt="GitHub" class="h-5/6" />
+            <h3>More on GitHub</h2>
           </a>
-        </section>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
