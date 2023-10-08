@@ -1,0 +1,42 @@
+---
+
+---
+
+<header>
+  <div class="gradient-bg"></div>
+  <slot />
+</header>
+
+<style>
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    height: 18rem;
+    color: var(--light);
+  }
+
+  .gradient-bg {
+    --angle: 180deg;
+    background: linear-gradient(
+      var(--angle),
+      #a29bfe 0%,
+      rgba(255, 118, 94, 0.9) 100%
+    );
+    animation: 10s ease-in-out infinite;
+    animation-name: bg-rotate;
+  }
+
+  header .gradient-bg {
+    position: absolute;
+
+    width: 100%;
+    height: 18rem;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  }
+</style>

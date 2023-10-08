@@ -1,0 +1,199 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Default.astro";
+---
+
+<Layout
+  title="Brendan McGuire"
+  description="Brendan McGuire is a Software Developer currently based in Madison, WI"
+>
+  <section slot="header-contents" class="intro">
+    <h1>Hey, I'm Brendan!</h1>
+    <section class="socials">
+      <a
+        href="https://go.bren.app/github"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img src="./github.svg" alt="GitHub" />
+      </a>
+      <a
+        href="https://go.bren.app/linkedin"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img src="./linked.svg" alt="LinkedIn" />
+      </a>
+      <a
+        href="mailto:brendan@bren.app"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img src="./email.svg" alt="Email" />
+      </a>
+    </section>
+    <section class="image">
+      <img
+        src="https://avatars.githubusercontent.com/u/8839926"
+        alt="Profile Picture"
+        width="217"
+        height="217"
+        class="aspect-square"
+      />
+    </section>
+  </section>
+  <div slot="body">
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        I am a Software Developer currently based in Madison, WI. I currently
+        work for Epic Systems on the Chronicles Database. I have a passion for
+        building:
+      </p>
+      <ul>
+        <li>Powerful, intuitive and accessible user interfaces</li>
+        <li>Awesome Developer Tooling</li>
+        <li>Software to make people's lives easier</li>
+      </ul>
+      <p>
+        I fell in love with software at a young age, particularly web
+        technology. The first time I saw the source of a website in DevTools, I
+        was hooked!
+      </p>
+      <p>
+        Additionally, I am also involved in the competitive robotics space,
+        particularly the VEX Robotics Competition and VEX IQ Robotics
+        Competition. These programs benefitted me immensely when I was younger,
+        so nothing else gets me as excited to wake up at 6:00 AM on a Saturday!
+      </p>
+    </section>
+    <!-- <section id="projects">
+      <h2>Featured Projects</h2>
+      <ul>
+        <a href="https://github.com/MayorMonty/tm-switcher" role="listitem">
+          <h3>TM Switcher</h3>
+          <p>
+            A fully-featured livestream management system for VEX Robotics
+            Events. Integrates with VEX Tournament Manager, OBS, and ATEM
+          </p>
+        </a>
+        <a href="/guides/" role="listitem">
+          <h3>CS Guides</h3>
+          <p>
+            Guides to Computer Science topics I wrote while attending Clemson
+            University.
+          </p>
+        </a>
+        <a href="https://github.com/MayorMonty/snoostorm" role="listitem">
+          <h3>Snoostorm</h3>
+          <p>
+            An event-based wrapper for the Reddit API, allowing you to easily
+            write code to react to new comments, submissions, and events across
+            the Reddit API.
+          </p>
+        </a>
+        <a href="https://github.com/MayorMonty/liquid" role="listitem">
+          <h3>Liquid</h3>
+          <p>
+            A high-quality discord bot template, with great DX. Designed to get
+            you from idea to execution as quickly as possible, in a simple,
+            maintainable system.
+          </p>
+        </a>
+        <a href="https://github.com/MayorMonty/short" role="listitem">
+          <h3>Short</h3>
+          <p>
+            A fun lil PWA frontend for the Short.IO API, which powers
+            go.bren.app, my custom URL shortener.
+          </p>
+        </a>
+        <a href="https://github.com/MayorMonty/motes" role="listitem">
+          <h3>Motes</h3>
+          <p>
+            Quick, keyboard-friendly, and accessible note-taking app designed
+            for quick action items during meetings.
+          </p>
+        </a>
+        <a href="https://github.com/MayorMonty/PatBot" role="listitem">
+          <h3>PatBot</h3>
+          <p>
+            Delightful and spooky fine-tuned GPT-3.5 model hooked up to a
+            discord bot, fine-tuned on my friend Pat's message history.
+            Originally created as an April Fools joke.
+          </p>
+        </a>
+        <a
+          href="https://github.com/MayorMonty?tab=repositories"
+          role="listitem"
+          class="bg-zinc-950 text-center text-zinc-100 py-4 rounded-md flex items-center justify-center gap-4 hover:bg-zinc-700 md:col-span-2 lg:col-span-1"
+        >
+          <img src="./github.svg" alt="GitHub" class="h-5/6" />
+          <h3>More on GitHub</h3>
+        </a>
+      </ul>
+    </section> -->
+  </div>
+</Layout>
+
+<style>
+  section.intro {
+    max-width: var(--container);
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    box-sizing: border-box;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  section.intro .subhead {
+    margin: 0;
+    margin-left: 0.25rem;
+  }
+
+  .socials {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .socials > * {
+    margin-right: 1.75rem;
+  }
+
+  .image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 320px) {
+    header h1 {
+      font-size: 3.25rem;
+    }
+  }
+
+  .image img {
+    border-radius: 100%;
+    box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.05);
+    max-width: 45vw;
+    transition: 150ms ease-in-out box-shadow;
+    animation: 0.8s ease-in-out 0s 1 normal forwards running
+      header-image-fade-in-up;
+  }
+
+  .image img:hover {
+    box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.15);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    mix-blend-mode: overlay;
+  }
+</style>
