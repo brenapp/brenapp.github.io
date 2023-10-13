@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { title, description, hasHeader } = Astro.props;
+
+const showHeader = hasHeader === undefined || hasHeader === true;
 ---
 
 <!doctype html>
@@ -22,7 +24,7 @@ const { title, description, hasHeader } = Astro.props;
   </head>
   <body>
     {
-      hasHeader && (
+      showHeader && (
         <Header>
           <slot name="header-contents" />
         </Header>
