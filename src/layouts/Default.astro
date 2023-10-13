@@ -4,9 +4,10 @@ import Header from "../components/Header.astro";
 interface Props {
   title: string;
   description: string;
+  hasHeader?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, hasHeader } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,9 +21,13 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Header>
-      <slot name="header-contents" />
-    </Header>
+    {
+      hasHeader && (
+        <Header>
+          <slot name="header-contents" />
+        </Header>
+      )
+    }
     <main>
       <slot name="body" />
     </main>

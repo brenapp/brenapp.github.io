@@ -1,10 +1,10 @@
 ---
-import Layout from "../../layouts/Default.astro";
+import Layout from "../layouts/Default.astro";
 ---
 
 <Layout
-  title="Brendan McGuire"
-  description="Brendan McGuire is a Software Developer currently based in Madison, WI"
+  title="CS Guides"
+  description="Course guides I wrote for various Computer Science classes when I was an undergraduate at Clemson University"
 >
   <section slot="header-contents" class="intro">
     <h1>CS Guides</h1>
@@ -250,18 +250,5 @@ import Layout from "../../layouts/Default.astro";
   div#main-content {
     max-width: var(--container);
     margin: 0 auto;
-  }
-
-  section.intro {
-    max-width: var(--container);
-    height: 100%;
-    margin: 0 auto;
-    padding: 1.5rem 1.5rem;
-    box-sizing: border-box;
-
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    font-size: 3.25rem;
   }
 </style>

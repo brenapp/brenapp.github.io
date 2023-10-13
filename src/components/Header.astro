@@ -2,7 +2,7 @@
 
 ---
 
-<header>
+<header id="page-header">
   <div class="gradient-bg"></div>
   <slot />
 </header>
@@ -14,7 +14,7 @@
     inherits: false;
   }
 
-  header {
+  header#page-header {
     position: relative;
     width: 100%;
     height: 18rem;
@@ -32,11 +32,26 @@
     animation-name: bg-rotate;
   }
 
-  header .gradient-bg {
+  header#page-header .gradient-bg {
     position: absolute;
 
     width: 100%;
     height: 18rem;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  }
+</style>
+
+<style is:global>
+  header#page-header section.intro {
+    max-width: var(--container);
+    height: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem;
+    box-sizing: border-box;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-size: 3.25rem;
   }
 </style>
