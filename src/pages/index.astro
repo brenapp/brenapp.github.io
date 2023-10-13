@@ -42,7 +42,7 @@ import Layout from "../layouts/Default.astro";
       />
     </section>
   </section>
-  <div slot="body">
+  <div slot="body" id="main-content">
     <section id="about-me">
       <h2>About Me</h2>
       <p>
@@ -67,7 +67,7 @@ import Layout from "../layouts/Default.astro";
         so nothing else gets me as excited to wake up at 6:00 AM on a Saturday!
       </p>
     </section>
-    <!-- <section id="projects">
+    <section id="projects">
       <h2>Featured Projects</h2>
       <ul>
         <a href="https://github.com/MayorMonty/tm-switcher" role="listitem">
@@ -122,20 +122,29 @@ import Layout from "../layouts/Default.astro";
             Originally created as an April Fools joke.
           </p>
         </a>
-        <a
-          href="https://github.com/MayorMonty?tab=repositories"
-          role="listitem"
-          class="bg-zinc-950 text-center text-zinc-100 py-4 rounded-md flex items-center justify-center gap-4 hover:bg-zinc-700 md:col-span-2 lg:col-span-1"
-        >
-          <img src="./github.svg" alt="GitHub" class="h-5/6" />
-          <h3>More on GitHub</h3>
-        </a>
       </ul>
-    </section> -->
+    </section>
   </div>
 </Layout>
 
 <style>
+  div#main-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: var(--container);
+  }
+
+  @media (min-width: 1024px) {
+    div#main-content {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    section#about-me {
+      grid-column: 1 / 2 span;
+    }
+  }
+
   section.intro {
     max-width: var(--container);
     height: 100%;
@@ -178,22 +187,83 @@ import Layout from "../layouts/Default.astro";
     }
   }
 
+  @keyframes header-image-fade-in-up {
+    0% {
+      opacity: 80%;
+      transform: translate3d(0, 15%, 0);
+      box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.05);
+    }
+
+    50% {
+      opacity: 100%;
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.05);
+    }
+
+    75% {
+      opacity: 100%;
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.15);
+    }
+
+    100% {
+      opacity: 100%;
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.05);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    @keyframes header-image-fade-in-up {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .image {
+    height: 65%;
+    aspect-ratio: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    .image {
+      height: 75%;
+    }
+  }
+
   .image img {
     border-radius: 100%;
     box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.05);
-    max-width: 45vw;
     transition: 150ms ease-in-out box-shadow;
+    width: 100%;
+    height: 100%;
     animation: 0.8s ease-in-out 0s 1 normal forwards running
       header-image-fade-in-up;
-  }
-
-  .image img:hover {
-    box-shadow: 0px 4px 13px 14px rgba(255, 118, 94, 0.15);
   }
 
   h1 {
     margin: 0;
     font-size: 2.25rem;
     mix-blend-mode: overlay;
+  }
+
+  section#projects ul {
+    padding: 0;
+  }
+
+  section#projects a {
+    text-decoration: none;
+  }
+
+  section#projects a h3 {
+    margin-block-end: 0.25rem;
+  }
+
+  section#projects a p {
+    color: var(--light);
+    margin-block-start: 0;
   }
 </style>
