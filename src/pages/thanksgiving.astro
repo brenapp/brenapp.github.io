@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Default.astro";
+---
+
+<Layout
+  title="Thanksgiving 2023"
+  description="Information about Thanksgiving 2023"
+>
+  <section slot="header-contents" class="intro">
+    <h1>Thanksgiving 2023</h1>
+  </section>
+
+  <div slot="body" id="main-content">
+    <p>
+      Dinner will be hosted at Brendan's apartment building in Downtown Madison.
+      When you arrive, please message me so I can get you from the lobby. Plan
+      to arrive around 2:00 PM. If you have any dietary preferences you would
+      like us to accommodate, please let me know as soon as possible.
+    </p>
+
+    <h4>Contact Information</h4>
+    <p>
+      <em>Brendan McGuire</em> &nbsp;–&nbsp;<a href="tel:+18645209321"
+        >(864) 520-9321</a
+      >
+    </p>
+
+    <h4>Address</h4>
+    <p>
+      <a href="https://maps.app.goo.gl/sq9f92UKxzMfTe488"
+        >216 S Pinckey St, Madison WI 53707</a
+      >
+    </p>
+
+    <h4>Parking</h4>
+    <p>
+      Unfortunately, I don't have free visitor parking. The City of Madison
+      operates a parking garage in the same building, and rates are $1.50/hour.
+    </p>
+  </div>
+</Layout>
+
+<style>
+  div#main-content {
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    margin: 0px;
+  }
+</style>
