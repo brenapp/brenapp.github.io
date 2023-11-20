@@ -7,7 +7,7 @@ import Layout from "../layouts/Default.astro";
   description="Information about Thanksgiving 2023"
 >
   <section slot="header-contents" class="intro">
-    <h1>Thanksgiving 2023</h1>
+    <h1 class="headerTitle">Thanksgiving 2023</h1>
   </section>
 
   <div slot="body" id="main-content">
@@ -53,5 +53,9 @@ import Layout from "../layouts/Default.astro";
 
   p {
     margin: 0px;
+  }
+
+  .headerTitle {
+    font-size: unset;
   }
 </style>
